@@ -35,7 +35,8 @@ angular.module('cricketApp', ['ionic'])
     url: '/fixtures',
     views: {
       'menuContent': {
-        templateUrl: 'app/fixtures/fixtures.html'
+        templateUrl: 'app/fixtures/fixtures.html',
+        controller :'fixtureController as  vm'
       }
     }
   })

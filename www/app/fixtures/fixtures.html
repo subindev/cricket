@@ -1,8 +1,8 @@
 <ion-view view-title="Fixtures">
   <ion-content>
-  <h2>fixtures</h2>
+  <h2>Fixtures</h2>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+      <ion-item ng-repeat="playlist in vm.playlists" href="#/app/playlists/{{playlist.id}}">
         {{playlist.title}}
       </ion-item>
     </ion-list>
