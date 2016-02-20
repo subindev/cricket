@@ -45,11 +45,21 @@ angular.module('cricketApp', ['ionic'])
       url: '/teams',
       views: {
         'menuContent': {
-          templateUrl: 'app/teams/teams.html'
+          templateUrl: 'app/teams/teams.html',
+          controller : 'teamsController as vm'
+        }
+      }
+  })
+  .state('app.points', {
+      url: '/points',
+      views: {
+        'menuContent': {
+          templateUrl: 'app/points/points.html',
+          controller : 'pointsController as vm'
         }
       }
     })
-    .state('app.favorites', {
+  .state('app.favorites', {
       url: '/favorites',
       views: {
         'menuContent': {
