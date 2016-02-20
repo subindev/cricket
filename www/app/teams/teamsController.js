@@ -5,11 +5,13 @@
 		var self = this;
 
 		var init = function(){
-			console.log(cricketApi.getallteams());
+			var teamObj = cricketApi.getallteams();
+			self.groups = teamObj.groups;
+			console.log(self.groups);
 		};
 
 		init();
-		
+
 	}]);
 
 }());

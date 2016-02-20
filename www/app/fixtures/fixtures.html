@@ -1,10 +1,14 @@
 <ion-view view-title="Fixtures">
-  <ion-content>
-  <h2>Fixtures</h2>
-    <ion-list>
-      <ion-item ng-repeat="playlist in vm.playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
-    </ion-list>
+  <ion-content class="has-header">
+  	<div class="list">
+  		<div class="item" ng-repeat="match in vm.fixtures">
+  			<h2>{{match.description}}</h2>
+     		<p>{{match.groupName}}</p>
+     		<p>{{match.matchDate | date}}</p>
+     		<span>{{match.team1.team.abbreviation}} vs {{match.team2.team.abbreviation}}</span>
+     		<p>{{match.team1.team.fullName}}</p>
+     		<p>{{match.team2.team.fullName}}</p>
+  		</div>
+  	</div>
   </ion-content>
 </ion-view>

@@ -4,11 +4,13 @@
 		var self = this;
 
 		var init = function(){
-			self.fixtures = cricketApi.getFixtures(); 
+			var fixtureObj = cricketApi.getfixtures();
+			self.fixtures = fixtureObj.schedule; 
+			console.log(self.fixtures);
 		};
 
 		init();
-		
+
 	}]);
 
 }());
