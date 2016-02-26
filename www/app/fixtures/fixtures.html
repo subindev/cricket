@@ -1,13 +1,51 @@
 <ion-view view-title="Fixtures">
-  <ion-content class="has-header">
+  <ion-content class="has-header fixtures">
+
+
+    <li class="item item-toggle filters">
+      <div class="buttons-block">
+        <i class="add-favorites ion-android-star"></i>
+      </div>
+       <span>Show only favorites</span>
+       <label class="toggle toggle-light toggle-small">
+         <input type="checkbox">
+         <div class="track">
+           <div class="handle"></div>
+         </div>
+       </label>
+    </li>
+
+    <div class="row custom-tabs">
+      <div class="col active">Group</div>
+      <div class="col">Semi Final</div>
+      <div class="col">Final</div>
+    </div>
+
   	<div class="list">
-  		<div class="item" ng-repeat="match in vm.fixtures">
-  			<h2>{{match.description}}</h2>
-     		<p>{{match.groupName}}</p>
-     		<p>{{match.matchDate | date}}</p>
-     		<span>{{match.team1.team.abbreviation}} vs {{match.team2.team.abbreviation}}</span>
-     		<p>{{match.team1.team.fullName}}</p>
-     		<p>{{match.team2.team.fullName}}</p>
+      <div class="item item-divider">
+        25 March, in three weeks
+      </div>
+  		<div class="item list-item" ng-repeat="match in vm.fixtures">
+
+        <div class="row">
+          <div class="col">
+            <img ng-src="img/flags/{{match.team1.team.abbreviation}}.svg">
+            <p>{{match.team1.team.fullName}}</p>            
+            <p>{{match.team1.team.abbreviation}}</p>            
+          </div>
+          <div class="col middle">
+            <h1>{{match.matchDate | date:'HH:mm'}}</h1>
+            <button class="button button-icon ion-ios-bell-outline"></button>            
+          </div>
+          <div class="col">
+            <img ng-src="img/flags/{{match.team2.team.abbreviation}}.svg">
+            <p>{{match.team2.team.fullName}}</p>            
+            <p>{{match.team2.team.abbreviation}}</p>            
+          </div>
+
+        </div>
+        <!-- <h2>{{match.description}}</h2>
+        <p>{{match.groupName}}</p> -->
   		</div>
   	</div>
   </ion-content>
