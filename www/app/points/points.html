@@ -1,13 +1,23 @@
 <ion-view view-title="Points">
 	<ion-content>
-		<div class="list">
-			<div ng-repeat="group in vm.groups">
-				<div class="item item-divider">{{group.groupName}}</div>
-				<div class="item" ng-repeat="standing in group.standings">
-					<h2>{{standing.description}}</h2>
-					<p> Points   {{standing.points}}</p>
-					<p> Postiton {{standing.position}}</p>
-					<p>{{standing.team.fullName}}</p>
+		<div class="list points-list">
+			<div ng-repeat="group in vm.groups" ng-if="group.standings.length">
+				<div class="item item-divider">{{::group.groupName}}</div>
+				<div class="item points-item" ng-repeat="standing in group.standings">
+					<div class="row">
+						<div class="col">
+							<img ng-src="img/flags/{{standing.team.abbreviation}}.svg">
+							<p>{{::standing.team.fullName}}</p>							
+						</div>
+						<div class="col">
+							<!-- <h1>#{{$index + 1}}</h1> -->
+							<span> Postiton {{::standing.position}}</span>
+						</div>
+						<div class="col">
+							<span> Points {{::standing.points}}</span>							
+						</div>
+					</div>
+					<!-- <h2>{{standing.description}}</h2> -->
 				</div>
 			</div>
 		</div>

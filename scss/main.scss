@@ -132,9 +132,59 @@
 	}
 }
 
+.teams-list{
+	.teams-item{
+		padding-left: 70px;
+		img{
+			position: absolute;
+			max-width: 40px;
+			max-height: 40px;
+			width: 100%;
+			height: 100%;
+			left: 10px;
+			top: 5px;
+		}
+	}
+}
 
 
+.points-list{
+	.col{
+		text-align: center;
+	}
+	img{
+		width: 40px;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	}
+	.points-item{
+		padding: 0;
+		padding-top: 5px;
+		h1{
+			font-weight: 400;
+			font-size: 28px;
+			padding-top: 5px;
+			color: #6E6E6E;
+		}
+		span{
+			padding-top: 15px;
+			display: inline-block;
+		}
+	}
+}
 
+
+.flag{
+	border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	&.flag-sm{
+		width: 40px;
+	}
+}
+
+.text-center{
+	text-align: center;
+}
 
 
 
