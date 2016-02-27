@@ -6,18 +6,18 @@
   .side-menu header p {
     color: #999; }
 
-.side-menu .list {
+.side-menu .side-menu-list {
   margin-top: 20px; }
-  .side-menu .list .item {
+  .side-menu .side-menu-list .item {
     border-color: #F5F5F5;
     font-size: 15px; }
-    .side-menu .list .item .item-content {
+    .side-menu .side-menu-list .item .item-content {
       padding-left: 60px; }
-    .side-menu .list .item i {
+    .side-menu .side-menu-list .item i {
       color: #D0D0D0; }
-  .side-menu .list .item:first-child {
+  .side-menu .side-menu-list .item:first-child {
     border-top: none; }
-  .side-menu .list .item:last-child {
+  .side-menu .side-menu-list .item:last-child {
     border-bottom: none; }
 
 .filters {
@@ -45,7 +45,8 @@
     background: #5CE295; }
 
 .custom-tabs {
-  background: #FFF; }
+  background: #FFF;
+  padding: 0; }
   .custom-tabs div {
     text-align: center;
     font-size: 18px;

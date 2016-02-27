@@ -1,11 +1,17 @@
 <ion-view view-title="Teams">
 	<ion-content>
-		<div class="list">
-			<div ng-repeat="group in vm.groups">
-				<div class="item" ng-repeat="standing in group.standings">
+
+		<div ng-repeat="group in vm.groups">
+			<div class="item-divider">
+				{{group.groupName}}				
+			</div>
+			<div class="list">
+				<div class="item item-thumbnail-left" ng-repeat="standing in group.standings">
+					<img ng-src="img/flags/{{standing.team.abbreviation}}.svg">
 					<h2>{{standing.team.fullName}}</h2>
 				</div>
 			</div>
 		</div>
+
 	</ion-content>
 </ion-view>
